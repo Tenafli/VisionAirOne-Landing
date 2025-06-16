@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VisionAirOne – For the Ones Who Matter Most</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 100px 60px;
+      background-color: #0a0a0a;
+    }
+    .hero-text {
+      flex: 1 1 50%;
+      padding-right: 40px;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #aaa;
+      margin: 20px 0;
+    }
+    .cta-buttons a {
+      display: inline-block;
+      background-color: #00aaff;
+      color: #fff;
+      padding: 12px 24px;
+      margin: 10px 10px 0 0;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    .hero-img {
+      flex: 1 1 40%;
+      max-width: 400px;
+    }
+    .hero-img img {
+      width: 100%;
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+    .feature {
+      flex: 1 1 250px;
+      background-color: #111;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: left;
+    }
+    .testimonial {
+      font-style: italic;
+      color: #ccc;
+      margin-top: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #111;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    .waitlist input[type="text"],
+    .waitlist input[type="email"] {
+      padding: 12px;
+      width: 250px;
+      border-radius: 6px;
+      border: none;
+      margin-right: 10px;
+    }
+    .waitlist button {
+      padding: 12px 20px;
+      background-color: #00aaff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .responsive-video-container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .responsive-video-container video {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 32px #0008;
+      background: #111;
+      display: block;
+      margin: 0 auto;
+    }
+    @media (max-width: 700px) {
+      .responsive-video-container {
+        max-width: 100vw;
+        padding: 0 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header style="background: radial-gradient(ellipse at top right, #1a2636 40%, #0a0a0a 100%); padding: 60px 0 40px 0; display: flex; align-items: flex-start; justify-content: center; gap: 40px;">
+    <div class="hero-text" style="max-width: 520px; text-align: left; padding: 0 40px;">
+      <h1 style="font-size: 3.2rem; font-weight: 700; line-height: 1.1; margin-bottom: 18px; letter-spacing: -1px;">FOR THE<br>ONES WHO<br><span style='color:#6eeaff;'>MATTER MOST.</span></h1>
+      <p style="font-size: 1.25rem; color: #c7d6e0; margin-bottom: 32px;">A small, intelligent indoor drone that watches over your loved ones—and calls for help when they can't.</p>
+      <div class="cta-buttons" style="display: flex; gap: 18px;">
+        <a href="#how-it-works" style="background: none; border: 1.5px solid #6eeaff; color: #fff; padding: 14px 32px; border-radius: 30px; font-size: 1.1rem; font-weight: 600; transition: background 0.2s, color 0.2s;">LEARN HOW IT WORKS</a>
+        <a href="#waitlist" style="background: none; border: 1.5px solid #6eeaff; color: #fff; padding: 14px 32px; border-radius: 30px; font-size: 1.1rem; font-weight: 600; transition: background 0.2s, color 0.2s;">JOIN THE WAITLIST</a>
+      </div>
+    </div>
+    <div class="hero-img" style="flex: 0 0 420px; max-width: 420px; margin-top: 0;">
+      <img src="images/visionaire_tilted_product.png" alt="VisionAirOne Drone" style="width: 100%; max-width: 420px; filter: drop-shadow(0 8px 32px #0a0a0a);">
+    </div>
+  </header>
+
+  <section style="width: 100%; padding: 32px 0 24px 0; background: none; display: flex; justify-content: center; align-items: center;">
+    <h1 style="font-size: 3rem; font-weight: 800; letter-spacing: -2px; background: linear-gradient(90deg, #6eeaff 0%, #00aaff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; margin: 0;">VisionAirOne</h1>
+  </section>
+
+  <section style="width: 100%; background: none; padding: 10px 0 0 0; max-width: 1200px; margin: 0 auto; display: block;">
+    <div class="responsive-video-container">
+      <video controls poster="images/visionaire_one_product.png">
+        <source src="video/explanation_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div style="width: 100%; max-width: 1000px; margin: 32px auto 0 auto; text-align: center; display: block;">
+      <p style="color: #6eeaff; font-size: 1.3rem; font-weight: 600; margin-bottom: 8px;">Over 60% of fall-related deaths in seniors happen when help is delayed.</p>
+      <p style="color: #b0c4d4; font-size: 1rem;">— National Institute on Aging</p>
+    </div>
+  </section>
+
+  <section id="how-it-works" style="background: none; padding-top: 40px;">
+    <h2 style="color: #6eeaff; font-size: 2.1rem; font-weight: 700; margin-bottom: 36px; letter-spacing: -1px;">SMALLER. SMARTER. ALWAYS READY.</h2>
+    <div class="features" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 32px;">
+      <div class="feature" style="flex: 1 1 240px; background: none; border-radius: 10px; padding: 0 18px; min-width: 220px; max-width: 320px; text-align: center;">
+        <div style="margin-bottom: 18px;">
+          <svg width="40" height="40" fill="none" stroke="#6eeaff" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
+        </div>
+        <h3 style="color: #6eeaff; font-size: 1.1rem; font-weight: 700; margin-bottom: 10px;">AUTONOMOUS MONITORING</h3>
+        <p style="color: #b0c4d4; font-size: 1rem;">Deploys instantly when no movement or abnormal vitals are detected.</p>
+      </div>
+      <div class="feature" style="flex: 1 1 240px; background: none; border-radius: 10px; padding: 0 18px; min-width: 220px; max-width: 320px; text-align: center;">
+        <div style="margin-bottom: 18px;">
+          <svg width="40" height="40" fill="none" stroke="#6eeaff" stroke-width="2.2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3 style="color: #6eeaff; font-size: 1.1rem; font-weight: 700; margin-bottom: 10px;">PRIVATE LOCAL AI</h3>
+        <p style="color: #b0c4d4; font-size: 1rem;">All data processed locally in the home. Nothing stored in the cloud unless help is needed.</p>
+      </div>
+      <div class="feature" style="flex: 1 1 240px; background: none; border-radius: 10px; padding: 0 18px; min-width: 220px; max-width: 320px; text-align: center;">
+        <div style="margin-bottom: 18px;">
+          <svg width="40" height="40" fill="none" stroke="#6eeaff" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3 style="color: #6eeaff; font-size: 1.1rem; font-weight: 700; margin-bottom: 10px;">EMERGENCY RESPONSE BUILT IN</h3>
+        <p style="color: #b0c4d4; font-size: 1rem;">Calls 911 and contacts your emergency list when no response is detected.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 48px; background: none; max-width: 1200px; margin: 0 auto; padding: 60px 0 0 0;">
+    <div style="flex: 1 1 420px; min-width: 320px; max-width: 520px; text-align: left;">
+      <h2 style="color: #fff; font-size: 1.5rem; font-weight: 700; margin-bottom: 18px; letter-spacing: -0.5px;">REAL LIFE, SEAMLESS FIT.</h2>
+      <p style="color: #6eeaff; font-size: 1.15rem; font-weight: 600; margin-bottom: 10px;">FITS INTO YOUR HOME.<br>STAYS OUT OF YOUR WAY.</p>
+      <p style="color: #b0c4d4; font-size: 1.05rem; line-height: 1.7;">VisionAirOne quietly watches in silence, thanks to its small size and calm design. No invasive cameras. No wires. Just a calm presence and instant response.</p>
+    </div>
+    <div style="flex: 1 1 320px; min-width: 280px; max-width: 420px; text-align: left;">
+      <h2 style="color: #fff; font-size: 1.5rem; font-weight: 700; margin-bottom: 18px; letter-spacing: -0.5px;">WHAT FAMILIES SAY</h2>
+      <p style="color: #6eeaff; font-style: italic; font-size: 1.08rem; margin-bottom: 10px;">"I live three states away. Now I sleep better knowing something's watching over Mom—even when I can't."<br><span style='color:#b0c4d4;'>— Rachel D., Daughter & Caregiver</span></p>
+      <p style="color: #6eeaff; font-style: italic; font-size: 1.08rem;">"It doesn't feel like a camera. It feels like peace of mind."<br><span style='color:#b0c4d4;'>— Tom L., Son of Independent Senior</span></p>
+    </div>
+  </section>
+
+  <section id="waitlist" style="background: none; max-width: 900px; margin: 0 auto; padding: 60px 0 80px 0; text-align: left;">
+    <h2 style="color: #6eeaff; font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.5px;">JOIN THE WAITLIST</h2>
+    <p style="color: #fff; font-size: 1.15rem; font-weight: 600; margin-bottom: 8px;">BE THE FIRST TO PROTECT WHO MATTERS MOST.</p>
+    <p style="color: #b0c4d4; font-size: 1.05rem; margin-bottom: 24px;">We're launching soon. Sign up to be the first to know when VisionAirOne is available.</p>
+    <form class="waitlist" style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center;">
+      <input type="text" placeholder="First name" required style="padding: 14px; width: 220px; border-radius: 6px; border: none; margin-right: 10px; font-size: 1rem; background: #181f26; color: #fff;">
+      <input type="email" placeholder="Email address" required style="padding: 14px; width: 260px; border-radius: 6px; border: none; margin-right: 10px; font-size: 1rem; background: #181f26; color: #fff;">
+      <button type="submit" style="padding: 14px 32px; background: linear-gradient(90deg, #6eeaff 0%, #00aaff 100%); color: #0a0a0a; border: none; border-radius: 30px; font-weight: 700; font-size: 1.1rem; cursor: pointer; transition: background 0.2s;">JOIN THE WAITLIST</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>VisionAirOne™ — Always There When It Matters</p>
+    <p>© 2025 VisionAirOne. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var video = document.querySelector('video');
+      if (video) {
+        video.addEventListener('ended', function() {
+          video.currentTime = 0;
+          video.pause();
+          // Force poster to show again
+          video.load();
+        });
+      }
+    });
+  </script>
+</body>
+</html> 
