@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VisionAirOne – For the Ones Who Matter Most</title>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8B2YLED6Y9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8B2YLED6Y9');
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -210,13 +218,102 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Video tracking
       var video = document.querySelector('video');
       if (video) {
+        // Track video play
+        video.addEventListener('play', function() {
+          gtag('event', 'video_play', {
+            'event_category': 'engagement',
+            'event_label': 'Product Video',
+            'video_title': 'VisionAirOne Product Video'
+          });
+        });
+
+        // Track video pause
+        video.addEventListener('pause', function() {
+          gtag('event', 'video_pause', {
+            'event_category': 'engagement',
+            'event_label': 'Product Video',
+            'video_title': 'VisionAirOne Product Video'
+          });
+        });
+
+        // Track video completion
         video.addEventListener('ended', function() {
+          gtag('event', 'video_complete', {
+            'event_category': 'engagement',
+            'event_label': 'Product Video',
+            'video_title': 'VisionAirOne Product Video'
+          });
           video.currentTime = 0;
           video.pause();
-          // Force poster to show again
           video.load();
+        });
+
+        // Track video progress
+        let progressTriggered = new Set();
+        video.addEventListener('timeupdate', function() {
+          const progress = Math.floor((video.currentTime / video.duration) * 100);
+          [25, 50, 75, 90].forEach(threshold => {
+            if (progress >= threshold && !progressTriggered.has(threshold)) {
+              gtag('event', 'video_progress', {
+                'event_category': 'engagement',
+                'event_label': `Video Progress ${threshold}%`,
+                'value': threshold
+              });
+              progressTriggered.add(threshold);
+            }
+          });
+        });
+      }
+
+      // Track first visit
+      if (!localStorage.getItem('hasVisited')) {
+        gtag('event', 'first_visit', {
+          'event_category': 'engagement',
+          'event_label': 'First time visitor'
+        });
+        localStorage.setItem('hasVisited', 'true');
+      }
+
+      // Track scroll depth
+      let scrollDepthTriggered = new Set();
+      window.addEventListener('scroll', function() {
+        const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+        [25, 50, 75, 90].forEach(threshold => {
+          if (scrollPercent >= threshold && !scrollDepthTriggered.has(threshold)) {
+            gtag('event', 'scroll_depth', {
+              'event_category': 'engagement',
+              'event_label': `Scrolled ${threshold}%`,
+              'value': threshold
+            });
+            scrollDepthTriggered.add(threshold);
+          }
+        });
+      });
+
+      // Track button clicks
+      document.querySelectorAll('a, button').forEach(element => {
+        element.addEventListener('click', function(e) {
+          const buttonText = this.textContent.trim();
+          const buttonId = this.id || 'unnamed_button';
+          gtag('event', 'button_click', {
+            'event_category': 'engagement',
+            'event_label': buttonText,
+            'button_id': buttonId
+          });
+        });
+      });
+
+      // Track form submissions
+      const waitlistForm = document.querySelector('.waitlist');
+      if (waitlistForm) {
+        waitlistForm.addEventListener('submit', function(e) {
+          gtag('event', 'form_submission', {
+            'event_category': 'engagement',
+            'event_label': 'Waitlist Signup'
+          });
         });
       }
     });
